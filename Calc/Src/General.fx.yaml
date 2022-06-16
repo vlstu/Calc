@@ -74,7 +74,7 @@ General As screen:
         FontWeight: =FontWeight.Bold
         Height: =75
         OnSelect: =
-        Text: ="Расскажи, как сделать удобнее."
+        Text: ="Расскажи, как сделать удобнее. "
         Width: =175
         X: =1191
         Y: =615
