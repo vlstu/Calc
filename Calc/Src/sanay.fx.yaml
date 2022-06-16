@@ -1,0 +1,106 @@
+sanay As screen:
+
+    Button6 As button:
+        OnSelect: |
+            =Set(cc,1)
+        Text: ="Далее"
+        X: =1029
+        Y: =321
+        ZIndex: =4
+
+    Button8 As button:
+        OnSelect: =Set(cc,2)
+        Text: ="Кнопка"
+        X: =147
+        Y: =281
+        ZIndex: =5
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Button1_2 As button:
+            DisplayMode: =If(x = 1.2, Disabled,Edit)
+            Height: =38
+            OnSelect: =Set(x,1.2)
+            Text: ="Только доставка"
+            Visible: =If(cc=1,true,false)
+            Width: =341
+            X: =519
+            Y: =590
+            ZIndex: =1
+
+        Button2_2 As button:
+            DisplayMode: =If(x = 1.5, Disabled,Edit)
+            OnSelect: =Set(x,1.5)
+            Text: ="Доставка и сборка"
+            Visible: =If(cc=1,true,false)
+            Width: =341
+            X: =519
+            Y: =642
+            ZIndex: =2
+
+        Button3_2 As button:
+            DisplayMode: =If(x = 1, Disabled,Edit)
+            OnSelect: =Set(x,1)
+            Text: ="Доставка сборка не нужны"
+            Visible: =If(cc=1,true,false)
+            Width: =341
+            X: =519
+            Y: =538
+            ZIndex: =3
+
+    м1 As dropdown:
+        Items: =["338","335"]
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+    Group3_1 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =9
+
+        Button1_3 As button:
+            DisplayMode: =If(x = 1.2, Disabled,Edit)
+            Height: =38
+            OnSelect: =Set(x,1.2)
+            Text: ="Только доставка"
+            Visible: =If(cc=2,true,false)
+            Width: =341
+            X: =519
+            Y: =206
+            ZIndex: =6
+
+        Button2_3 As button:
+            DisplayMode: =If(x = 1.5, Disabled,Edit)
+            OnSelect: =Set(x,1.5)
+            Text: ="Доставка и сборка"
+            Visible: =If(cc=2,true,false)
+            Width: =341
+            X: =519
+            Y: =258
+            ZIndex: =7
+
+        Button3_3 As button:
+            DisplayMode: =If(x = 1, Disabled,Edit)
+            OnSelect: =Set(x,1)
+            Text: ="Доставка сборка не нужны"
+            Visible: =If(cc=2,true,false)
+            Width: =341
+            X: =519
+            Y: =154
+            ZIndex: =8
+
+    Label10 As label:
+        Height: =62
+        Text: ="Выбери магазин "& м1.SelectedText.Value
+        X: =52
+        Y: =132
+        ZIndex: =10
+

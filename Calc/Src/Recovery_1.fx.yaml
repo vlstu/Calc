@@ -1,0 +1,225 @@
+Recovery_1 As screen:
+
+    TextInput1_1 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        Height: =92
+        OnSelect: =
+        Size: =15
+        Y: =551
+        ZIndex: =1
+
+    Label1_1 As label:
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        Height: =92
+        Size: =15
+        Text: =TextInput1_1 * x * 0.2
+        Width: =256
+        X: =808
+        Y: =551
+        ZIndex: =2
+
+    Label11_1 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Введи стоимость товара:"
+        Width: =315
+        X: =5
+        Y: =499
+        ZIndex: =14
+
+    Label12_1 As label:
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            ="Итог:"
+        Width: =256
+        X: =808
+        Y: =499
+        ZIndex: =15
+
+    Image2_1 As image:
+        Height: =289
+        Image: ='MicrosoftTeams-image'
+        Width: =1043
+        Y: =60
+        ZIndex: =16
+
+    Label4 As label:
+        Height: =38
+        Text: ="Помочь с процессом?"
+        Width: =196
+        X: =1155
+        Y: =486
+        ZIndex: =27
+
+    Group2_16 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =27
+
+        Button5_29 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on1",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on1") And Navigate(General)
+            Text: ="Главная"
+            Width: =115
+            X: =21
+            Y: =23
+            ZIndex: =17
+
+        Button6_29 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on2",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on2") And Navigate(Recovery_1)
+            Text: ="Уценка"
+            Width: =120
+            X: =158
+            Y: =23
+            ZIndex: =18
+
+        Button7_29 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on3",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on3") And Navigate(accambly)
+            Text: ="Сборка/ CMW"
+            Width: =136
+            X: =304
+            Y: =23
+            ZIndex: =19
+
+        Button8_29 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on4",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on4") And Navigate(Delivery)
+            Text: ="Доставка"
+            Width: =136
+            X: =456
+            Y: =23
+            ZIndex: =20
+
+        Button9_29 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on5",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            Text: ="Обмен"
+            Width: =136
+            X: =617
+            Y: =23
+            ZIndex: =21
+
+        Button10_67 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on6",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on6") And Navigate(Fuel)
+            Text: ="Комп.Бензина"
+            Width: =159
+            X: =785
+            Y: =23
+            ZIndex: =22
+
+        Image1_29 As image:
+            Height: =254
+            Image: =VaultBoyFO3
+            OnSelect: =Notify("Ответственный за обновление milov5. Ответственный за разработку vlstu",NotificationType.Success,2000)
+            Width: =272
+            X: =1094
+            Y: =78
+            ZIndex: =23
+
+        Label10_29 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Prod. vlstu"
+            X: =1201
+            Y: =322
+            ZIndex: =24
+
+        Button10_68 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on7",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on7") And Navigate(Date)
+            Text: ="Пропущенный день"
+            Width: =159
+            X: =968
+            Y: =23
+            ZIndex: =25
+
+        Button10_69 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on8",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
+            Text: ="Неустойка по выплатам"
+            Width: =159
+            X: =1150
+            Y: =23
+            ZIndex: =26
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Button1_1 As button:
+            DisplayMode: =If(x = 1.2, Disabled,Edit)
+            Height: =38
+            OnSelect: =Set(x,1.2)
+            Text: ="Только доставка"
+            Width: =341
+            X: =382
+            Y: =551
+            ZIndex: =3
+
+        Button2_1 As button:
+            DisplayMode: =If(x = 1.5, Disabled,Edit)
+            OnSelect: =Set(x,1.5)
+            Text: ="Доставка и сборка"
+            Width: =341
+            X: =382
+            Y: =603
+            ZIndex: =4
+
+        Button3_1 As button:
+            DisplayMode: =If(x = 1, Disabled,Edit)
+            OnSelect: =Set(x,1)
+            Text: ="Доставка сборка не нужны"
+            Width: =341
+            X: =382
+            Y: =499
+            ZIndex: =5
+
+    Icon1 As icon.Information:
+        Icon: =Icon.Information
+        Rotation: =180
+        X: =1201
+        Y: =551
+        ZIndex: =28
+

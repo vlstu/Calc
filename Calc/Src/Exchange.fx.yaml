@@ -1,0 +1,269 @@
+Exchange As screen:
+
+    D1_2 As datepicker:
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        X: =29
+        Y: =623
+        ZIndex: =1
+
+    D2_2 As datepicker:
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        X: =29
+        Y: =703
+        ZIndex: =2
+
+    v2_3 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        OnSelect: =Reset(v2_3)
+        Size: =15
+        Width: =328
+        X: =29
+        Y: =545
+        ZIndex: =7
+
+    Label20 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Дата заявления требования:"
+        Width: =328
+        X: =29
+        Y: =584
+        ZIndex: =16
+
+    Label20_1 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Фактическая дата обмена:"
+        Width: =328
+        X: =29
+        Y: =663
+        ZIndex: =17
+
+    Label20_2 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Сумма товаров на обмен:"
+        Width: =328
+        X: =29
+        Y: =505
+        ZIndex: =18
+
+    Label20_3 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Итог:"
+        Width: =191
+        X: =1141
+        Y: =559
+        ZIndex: =19
+
+    Label20_4 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Дней просрочки:"
+        Width: =209
+        X: =934
+        Y: =559
+        ZIndex: =30
+
+    Image8 As image:
+        Height: =523
+        Image: ='depositphotos_1963996-stock-photo-exchange-or-trade'
+        Width: =510
+        X: =397
+        Y: =140
+        ZIndex: =31
+
+    Image1_33 As image:
+        Height: =109
+        Image: =YellowHeart
+        OnSelect: =Notify("Ответственный за обновление milov5. Ответственный за разработку vlstu",NotificationType.Success,2000)
+        Width: =146
+        X: =1218
+        Y: =93
+        ZIndex: =42
+
+    Group2_10 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =42
+
+        Button5_23 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on1",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on1") And Navigate(General)
+            Text: ="Главная"
+            Width: =115
+            X: =21
+            Y: =21
+            ZIndex: =32
+
+        Button6_23 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on2",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on2") And Navigate(Recovery)
+            Text: ="Уценка"
+            Width: =120
+            X: =158
+            Y: =21
+            ZIndex: =33
+
+        Button7_23 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on3",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on3") And Navigate(accambly)
+            Text: ="Сборка/ CMW"
+            Width: =136
+            X: =304
+            Y: =21
+            ZIndex: =34
+
+        Button8_23 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on4",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on4") And Navigate(Delivery)
+            Text: ="Доставка"
+            Width: =136
+            X: =456
+            Y: =21
+            ZIndex: =35
+
+        Button9_23 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on5",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            Text: ="Обмен"
+            Width: =136
+            X: =617
+            Y: =21
+            ZIndex: =36
+
+        Button10_51 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on6",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on6") And Navigate(Fuel)
+            Text: ="Комп.Бензина"
+            Width: =159
+            X: =785
+            Y: =21
+            ZIndex: =37
+
+        Button10_50 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on7",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on7") And Navigate(Date)
+            Text: ="Пропущенный день"
+            Width: =159
+            X: =968
+            Y: =21
+            ZIndex: =40
+
+        Button10_49 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on8",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
+            Text: ="Неустойка по выплатам"
+            Width: =159
+            X: =1150
+            Y: =21
+            ZIndex: =41
+
+    Label10_33 As label:
+        FontWeight: =FontWeight.Bold
+        Text: ="Prod. vlstu"
+        Width: =120
+        X: =1246
+        Y: =200
+        ZIndex: =43
+
+    Toggle2 As toggleSwitch:
+        Height: =36
+        OnCheck: =Set(dayob,30)
+        OnUncheck: =Set(dayob,7)
+        Width: =205
+        X: =1127
+        Y: =469
+        ZIndex: =44
+
+    Label6_10 As label:
+        Align: =Align.Center
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        Height: =144
+        Size: =15
+        Text: |-
+            =If(dayob = 7, 
+            If(
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-7)) <= v2_3*1,
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-7)),
+             v2_3*1),
+             If(
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-dayob)) <= v2_3*1,
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-dayob)),
+             v2_3*1))
+        Width: =191
+        X: =1145
+        Y: =599
+        ZIndex: =45
+
+    Label6_11 As label:
+        Align: =Align.Center
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        Height: =144
+        Size: =15
+        Text: |-
+            =If(dayob = 7,
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(D2_2.SelectedDate - D1_2.SelectedDate)-7),
+            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 30,0,(D2_2.SelectedDate - D1_2.SelectedDate)-30))
+        Width: =209
+        X: =934
+        Y: =599
+        ZIndex: =46
+
+    Label20_5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =15
+        Text: =If(dayob = 7,"Товар есть в наличии","Товара нет в наличии")
+        Width: =258
+        X: =1107
+        Y: =412
+        ZIndex: =48
+

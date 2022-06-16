@@ -1,0 +1,54 @@
+Screen2 As screen:
+
+    Image10 As image:
+        Height: =190
+        Image: ='MicrosoftTeams-image (7)'
+        Width: =178
+        X: =1188
+        ZIndex: =1
+
+    Dropdown3 As dropdown:
+        Items: =["Охрана","Брак","Столешницы"]
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =500
+        Items: =Table
+        Width: =800
+        X: =228
+        Y: =136
+        ZIndex: =3
+
+        Name_Столбец1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Name
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        datetimevalue_Столбец1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="datetimevalue"
+            FieldName: ="datetimevalue"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.datetimevalue
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+

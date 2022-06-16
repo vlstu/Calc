@@ -1,0 +1,85 @@
+Screen1 As screen:
+
+    Dropdown1 As dropdown:
+        Height: =48
+        Items: =["online","offline"]
+        Width: =206
+        X: =48
+        Y: =319
+        ZIndex: =1
+
+    Label7 As label:
+        Height: =46
+        Text: ="Какой способ оплаты?"
+        Width: =234
+        X: =48
+        Y: =273
+        ZIndex: =2
+
+    Dropdown2 As dropdown:
+        Height: =48
+        Items: =["338","335"]
+        Width: =208
+        X: =48
+        Y: =452
+        ZIndex: =3
+
+    Label7_1 As label:
+        Height: =46
+        Text: ="Ближайший магазин"
+        Width: =234
+        X: =48
+        Y: =406
+        ZIndex: =4
+
+    DR2 As dropdown:
+        Height: =48
+        Items: =["Да","Нет"]
+        OnSelect: =Notify("123",NotificationType.Information,500)
+        Tooltip: =
+        Width: =208
+        X: =48
+        Y: =178
+        ZIndex: =5
+
+    Label7_2 As label:
+        Height: =46
+        Text: ="Изменилась  ли стоимость в заказе?"
+        Tooltip: ="мвыс"
+        Width: =234
+        X: =48
+        Y: =132
+        ZIndex: =6
+
+    Button5 As button:
+        Height: =66
+        Text: ="Сгенерировать"
+        Width: =188
+        X: =57
+        Y: =564
+        ZIndex: =7
+
+    TextInput2 As text:
+        Default: ="Подсказки"
+        Height: =100
+        Width: =1278
+        X: =40
+        Y: =9
+        ZIndex: =8
+
+    Label13 As label:
+        Height: =266
+        Text: ="Текст"
+        Width: =766
+        X: =582
+        Y: =378
+        ZIndex: =9
+
+    Label18 As label:
+        Height: =55
+        Text: ="Текст"
+        Width: =596
+        X: =542
+        Y: =171
+        ZIndex: =10
+

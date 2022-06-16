@@ -1,0 +1,5 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Navigate(General) & Collect(fish,{Name: ПользователиOffice365.MyProfile().DisplayName, time: Now()}) 
+

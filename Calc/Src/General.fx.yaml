@@ -1,0 +1,401 @@
+General As screen:
+    BackgroundImage: =
+    Fill: =WhiteSmoke
+    ImagePosition: =ImagePosition.Fill
+
+    Icon2 As icon.Support:
+        Icon: =Icon.Support
+        OnSelect: =Set(feedback,1)
+        X: =1246
+        Y: =704
+        ZIndex: =10
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Button4_1 As button:
+            OnSelect: |
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/",{},LaunchTarget.New)
+            Text: ="ЗоЗПП"
+            X: =21
+            Y: =150
+            ZIndex: =13
+
+        Button5_1 As button:
+            Height: =59
+            OnSelect: |-
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/19c8339aa764510f25f4afcea83230cbf14cb9d3/",{},LaunchTarget.New)
+            Text: ="Моральный вред"
+            X: =21
+            Y: =204
+            ZIndex: =14
+
+        Button4_2 As button:
+            Height: =63
+            OnSelect: |-
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/76ae101b731ecc22467fd9f1f14cb9e2b8799026/",{},LaunchTarget.New)
+            Text: ="Права потребителя"
+            X: =21
+            Y: =276
+            ZIndex: =15
+
+        Button5_2 As button:
+            Height: =63
+            OnSelect: |-
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/2c9918ca490dc2eb68bb07347485443dc898183f/",{},LaunchTarget.New)
+            Text: ="Срок претензии"
+            X: =21
+            Y: =352
+            ZIndex: =16
+
+        Button5_4 As button:
+            Height: =63
+            OnSelect: |-
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/6dd6c070a38a1de71282c1f0206c1d9131d7446c/",{},LaunchTarget.New)
+            Text: ="Обмен товара"
+            X: =21
+            Y: =427
+            ZIndex: =19
+
+        Button5_5 As button:
+            Height: =63
+            OnSelect: |-
+                =Launch("http://www.consultant.ru/document/cons_doc_LAW_305/f190d8f6c0d4f03af399cc0efcc722d87a0f83a6/",{},LaunchTarget.New)
+            Text: ="Нарушение сроков"
+            X: =21
+            Y: =503
+            ZIndex: =20
+
+    Label22 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =75
+        OnSelect: =
+        Text: ="Расскажи, как сделать удобнее."
+        Width: =175
+        X: =1191
+        Y: =615
+        ZIndex: =22
+
+    RichTextEditor2 As richTextEditor:
+        Default: ="Введите здесь <strong>форматированный текст</strong>."
+        DisplayMode: =Edit
+        Height: =281
+        Visible: =If(feedback = 1,true,false)
+        Width: =579
+        X: =386
+        Y: =240
+        ZIndex: =23
+
+    Button7 As button:
+        OnSelect: |
+            =Office365Outlook.SendEmail("vladislav.stupak@ingka.ikea.com, mikhail.lovtsov@ingka.ikea.com","Калькулятор компенсаций", RichTextEditor2) And Set(feedback,0) 
+        Text: ="Отправить"
+        Visible: =If(feedback = 1,true,false)
+        X: =793
+        Y: =526
+        ZIndex: =24
+
+    Button7_1 As button:
+        OnSelect: = Set(feedback,0)
+        Text: ="Отмена"
+        Visible: =If(feedback = 1,true,false)
+        X: =618
+        Y: =526
+        ZIndex: =26
+
+    Image7 As image:
+        Height: =540
+        Image: ='image (2)'
+        Visible: =If(feedback <> 1, true, false)
+        Width: =1141
+        X: =105
+        Y: =190
+        ZIndex: =27
+
+    Button4 As button:
+        Height: =60
+        OnSelect: |-
+            =Launch("https://veta.ingka.com/knowledgecenter/docShow.do?realm=defaulthost&mandatorKey=MANDATOR_USU&callFromKminer=true&entity.GUID=7e0388d3-c6dc-4150-bf06-d36fc7ed485c",{},LaunchTarget.New)
+        Text: ="Компенс. модель"
+        X: =21
+        Y: =583
+        ZIndex: =28
+
+    Form1 As form:
+        AcceptsFocus: =false
+        DataSource: =Table
+        Height: =451
+        Visible: =false
+        Width: =927
+        X: =228
+        Y: =271
+        ZIndex: =31
+
+        Name_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Name"
+            Default: =ThisItem.Name
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="Name"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table], DataSourceInfo.MaxLength, "Name")
+            Required: =false
+            Update: =DataCardValue1.Text
+            Width: =309
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =ПользователиOffice365.MyProfileV2().displayName
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        datetimevalue_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="datetimevalue"
+            Default: =ThisItem.datetimevalue
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: ="datetimevalue"
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Table], DataSourceInfo.MaxLength, "datetimevalue")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Width: =309
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Now()
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+    Group2_15 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =42
+
+        Button5_28 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on1",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on1") And Navigate(General)
+            Text: ="Главная"
+            Width: =115
+            X: =21
+            Y: =26
+            ZIndex: =32
+
+        Button6_28 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on2",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on2") And Navigate(Recovery)
+            Text: ="Уценка"
+            Width: =120
+            X: =158
+            Y: =26
+            ZIndex: =33
+
+        Button7_28 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on3",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on3") And Navigate(accambly)
+            Text: ="Сборка/ CMW"
+            Width: =136
+            X: =304
+            Y: =26
+            ZIndex: =34
+
+        Button8_28 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on4",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on4") And Navigate(Delivery)
+            Text: ="Доставка"
+            Width: =136
+            X: =456
+            Y: =26
+            ZIndex: =35
+
+        Button9_28 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on5",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            Text: ="Обмен"
+            Width: =136
+            X: =617
+            Y: =26
+            ZIndex: =36
+
+        Button10_66 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on6",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on6") And Navigate(Fuel)
+            Text: ="Комп.Бензина"
+            Width: =159
+            X: =785
+            Y: =26
+            ZIndex: =37
+
+        Image1_28 As image:
+            Height: =109
+            Image: =YellowHeart
+            OnSelect: =Notify("Ответственный за обновление milov5. Ответственный за разработку vlstu",NotificationType.Success,2000)
+            Width: =146
+            X: =1218
+            Y: =93
+            ZIndex: =38
+
+        Label10_28 As label:
+            FontWeight: =FontWeight.Bold
+            Text: ="Prod. vlstu"
+            Width: =120
+            X: =1246
+            Y: =200
+            ZIndex: =39
+
+        Button10_65 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on7",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on7") And Navigate(Date)
+            Text: ="Пропущенный день"
+            Width: =159
+            X: =968
+            Y: =26
+            ZIndex: =40
+
+        Button10_64 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on8",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
+            Text: ="Неустойка по выплатам"
+            Width: =159
+            X: =1150
+            Y: =26
+            ZIndex: =41
+

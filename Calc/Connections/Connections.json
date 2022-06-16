@@ -1,0 +1,70 @@
+{
+  "e9dcd9ef-5872-45fc-9a87-2611c4236276": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office\u00A0365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1580/1.0.1580.2838/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e9dcd9ef-5872-45fc-9a87-2611c4236276"
+  },
+  "fd668975-e529-43ce-960b-11d4764d9cdb": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel Online (для бизнеса)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1579/1.0.1579.2824/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "groups%252F707aea75-7086-417f-a2eb-701d27ad5f1e,b%2521cR848jQgqE-kzN9YweoJloqo7jFv77FCkVr_AN5BLXESifOhg3-NR7vCYdG-U__S,01JPU5QZXWRLL6YHW5KJFJ53MHAABZUYPL": {
+        "dataSources": {
+          "Table": {
+            "tableName": "{B386283A-3487-405F-BC49-D4865D4B140B}"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "fd668975-e529-43ce-960b-11d4764d9cdb"
+  },
+  "fe433d9b-f999-47c1-9e5f-6ea610f339c3": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Пользователи Office\u00A0365",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1573/1.0.1573.2770/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "ПользователиOffice365"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "fe433d9b-f999-47c1-9e5f-6ea610f339c3"
+  }
+}

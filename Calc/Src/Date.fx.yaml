@@ -1,0 +1,223 @@
+Date As screen:
+
+    day2 As text:
+        BorderThickness: =5
+        Default: ="12"
+        FontWeight: =FontWeight.Bold
+        OnSelect: =Reset(day2)
+        Size: =15
+        X: =21
+        Y: =626
+        ZIndex: =3
+
+    day1 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        OnSelect: =Reset(day1)
+        Size: =15
+        X: =21
+        Y: =542
+        ZIndex: =7
+
+    day3 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        OnSelect: =Reset(day3)
+        Size: =15
+        X: =21
+        Y: =709
+        ZIndex: =8
+
+    Label9_1 As label:
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        Height: =153
+        Size: =15
+        Text: =Round((day1/22.8/day2)*day3,2)
+        Width: =296
+        X: =1046
+        Y: =596
+        ZIndex: =9
+
+    Label21 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        Size: =15
+        Text: |-
+            ="Сумма дохода за период:"
+        Width: =336
+        X: =21
+        Y: =503
+        ZIndex: =18
+
+    Label21_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        Size: =15
+        Text: |-
+            ="Количество месяцев за период:"
+        Width: =350
+        X: =23
+        Y: =587
+        ZIndex: =19
+
+    Label21_2 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =41
+        Size: =15
+        Text: |-
+            ="Количество пропущенных дней:"
+        Width: =368
+        X: =23
+        Y: =668
+        ZIndex: =20
+
+    Label21_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =39
+        Size: =15
+        Text: |-
+            ="Итог:"
+        Width: =320
+        X: =1046
+        Y: =557
+        ZIndex: =21
+
+    Image9 As image:
+        Height: =497
+        Image: =images
+        Width: =648
+        X: =320
+        Y: =129
+        ZIndex: =31
+
+    Image1_35 As image:
+        Height: =109
+        Image: =YellowHeart
+        OnSelect: =Notify("Ответственный за обновление milov5. Ответственный за разработку vlstu",NotificationType.Success,2000)
+        Width: =146
+        X: =1218
+        Y: =93
+        ZIndex: =42
+
+    Group2_9 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =42
+
+        Button5_22 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on1",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on1") And Navigate(General)
+            Text: ="Главная"
+            Width: =115
+            X: =21
+            Y: =24
+            ZIndex: =32
+
+        Button6_22 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on2",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on2") And Navigate(Recovery)
+            Text: ="Уценка"
+            Width: =120
+            X: =158
+            Y: =24
+            ZIndex: =33
+
+        Button7_22 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on3",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on3") And Navigate(accambly)
+            Text: ="Сборка/ CMW"
+            Width: =136
+            X: =304
+            Y: =24
+            ZIndex: =34
+
+        Button8_22 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on4",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on4") And Navigate(Delivery)
+            Text: ="Доставка"
+            Width: =136
+            X: =456
+            Y: =24
+            ZIndex: =35
+
+        Button9_22 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on5",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            Text: ="Обмен"
+            Width: =136
+            X: =617
+            Y: =24
+            ZIndex: =36
+
+        Button10_48 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on6",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on6") And Navigate(Fuel)
+            Text: ="Комп.Бензина"
+            Width: =159
+            X: =781
+            Y: =21
+            ZIndex: =37
+
+        Button10_47 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on7",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on7") And Navigate(Date)
+            Text: ="Пропущенный день"
+            Width: =159
+            X: =968
+            Y: =24
+            ZIndex: =40
+
+        Button10_46 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on8",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
+            Text: ="Неустойка по выплатам"
+            Width: =159
+            X: =1150
+            Y: =24
+            ZIndex: =41
+
+    Label10_35 As label:
+        FontWeight: =FontWeight.Bold
+        Text: ="Prod. vlstu"
+        Width: =120
+        X: =1246
+        Y: =200
+        ZIndex: =43
+

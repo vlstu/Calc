@@ -1,0 +1,216 @@
+Fuel As screen:
+
+    v1_2 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        X: =37
+        Y: =623
+        ZIndex: =3
+
+    v2_2 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        X: =37
+        Y: =543
+        ZIndex: =7
+
+    v3_2 As text:
+        BorderThickness: =5
+        Default: =
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        X: =37
+        Y: =703
+        ZIndex: =8
+
+    Label9 As label:
+        BorderThickness: =5
+        FontWeight: =FontWeight.Bold
+        Height: =136
+        Size: =15
+        Text: =Round((v2_2/100)*v1_2*v3_2,1)
+        Width: =320
+        X: =1021
+        Y: =607
+        ZIndex: =9
+
+    Label19 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Расход топлива в литрах:"
+        Width: =320
+        X: =37
+        Y: =503
+        ZIndex: =18
+
+    Label19_1 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Расстояние в км:"
+        Width: =320
+        X: =37
+        Y: =583
+        ZIndex: =19
+
+    Label19_2 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Стоимость бензина:"
+        Width: =320
+        X: =37
+        Y: =663
+        ZIndex: =20
+
+    Label19_3 As label:
+        FontWeight: =FontWeight.Bold
+        Size: =15
+        Text: |-
+            ="Итог:"
+        Width: =320
+        X: =1021
+        Y: =567
+        ZIndex: =21
+
+    Image6 As image:
+        Height: =350
+        Image: ='Без названия'
+        Width: =942
+        X: =214
+        Y: =178
+        ZIndex: =22
+
+    Image1_34 As image:
+        Height: =109
+        Image: =YellowHeart
+        OnSelect: =Notify("Ответственный за обновление milov5. Ответственный за разработку vlstu",NotificationType.Success,2000)
+        Width: =146
+        X: =1218
+        Y: =93
+        ZIndex: =33
+
+    Group2_11 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =33
+
+        Button5_24 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on1",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on1") And Navigate(General)
+            Text: ="Главная"
+            Width: =115
+            X: =21
+            Y: =21
+            ZIndex: =23
+
+        Button6_24 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on2",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on2") And Navigate(Recovery)
+            Text: ="Уценка"
+            Width: =120
+            X: =158
+            Y: =21
+            ZIndex: =24
+
+        Button7_24 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on3",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on3") And Navigate(accambly)
+            Text: ="Сборка/ CMW"
+            Width: =136
+            X: =304
+            Y: =21
+            ZIndex: =25
+
+        Button8_24 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on4",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on4") And Navigate(Delivery)
+            Text: ="Доставка"
+            Width: =136
+            X: =456
+            Y: =21
+            ZIndex: =26
+
+        Button9_24 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on5",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            Text: ="Обмен"
+            Width: =136
+            X: =617
+            Y: =21
+            ZIndex: =27
+
+        Button10_54 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on6",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on6") And Navigate(Fuel)
+            Text: ="Комп.Бензина"
+            Width: =159
+            X: =785
+            Y: =21
+            ZIndex: =28
+
+        Button10_53 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on7",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on7") And Navigate(Date)
+            Text: ="Пропущенный день"
+            Width: =159
+            X: =968
+            Y: =21
+            ZIndex: =31
+
+        Button10_52 As button:
+            DisabledBorderColor: =BlueViolet
+            DisabledColor: =Black
+            DisabledFill: =AliceBlue
+            DisplayMode: =If(mir="on8",Disabled,Edit)
+            Height: =55
+            OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
+            Text: ="Неустойка по выплатам"
+            Width: =159
+            X: =1150
+            Y: =21
+            ZIndex: =32
+
+    Label10_34 As label:
+        FontWeight: =FontWeight.Bold
+        Text: ="Prod. vlstu"
+        Width: =120
+        X: =1246
+        Y: =200
+        ZIndex: =34
+
