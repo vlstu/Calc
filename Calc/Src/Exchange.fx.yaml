@@ -230,12 +230,12 @@ Exchange As screen:
         Text: |-
             =If(dayob = 7, 
             If(
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-7)) <= v2_3*1,
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-7)),
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)) <= v2_3*1,
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)),
              v2_3*1),
              If(
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-dayob)) <= v2_3*1,
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate)-dayob)),
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)) <= v2_3*1,
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)),
              v2_3*1))
         Width: =191
         X: =1145
@@ -250,8 +250,8 @@ Exchange As screen:
         Size: =15
         Text: |-
             =If(dayob = 7,
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 7,0,(D2_2.SelectedDate - D1_2.SelectedDate)-7),
-            If((D2_2.SelectedDate - D1_2.SelectedDate) <= 30,0,(D2_2.SelectedDate - D1_2.SelectedDate)-30))
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob),
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob))
         Width: =209
         X: =934
         Y: =599

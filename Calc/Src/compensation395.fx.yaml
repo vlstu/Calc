@@ -16,7 +16,7 @@ compensation395 As screen:
         FontWeight: =FontWeight.Bold
         Height: =99
         Size: =15
-        Text: = If(v2_4*1%*(D2_3.SelectedDate - D1_3.SelectedDate) < v2_4*1,v2_4*1%*(D2_3.SelectedDate - D1_3.SelectedDate),v2_4*1)
+        Text: = If(v2_4*1%*(D2_3.SelectedDate - D1_3.SelectedDate+1) < v2_4*1,v2_4*1%*(D2_3.SelectedDate - D1_3.SelectedDate+1),v2_4*1)
         Width: =184
         X: =1150
         Y: =641
@@ -76,7 +76,7 @@ compensation395 As screen:
         FontWeight: =FontWeight.Bold
         Height: =99
         Size: =15
-        Text: =If((D2_3.SelectedDate - D1_3.SelectedDate) > 0,(D2_3.SelectedDate - D1_3.SelectedDate),0)
+        Text: =If((D2_3.SelectedDate - D1_3.SelectedDate+1) > 0,(D2_3.SelectedDate - D1_3.SelectedDate+1),0)
         Tooltip: =If((D2_3.SelectedDate - D1_3.SelectedDate) > 0,(D2_3.SelectedDate - D1_3.SelectedDate),0)
         Width: =194
         X: =956
