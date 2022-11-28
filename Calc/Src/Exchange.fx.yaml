@@ -213,9 +213,11 @@ Exchange As screen:
         ZIndex: =43
 
     Toggle2 As toggleSwitch:
+        Default: =
         Height: =36
         OnCheck: =Set(dayob,30)
         OnUncheck: =Set(dayob,7)
+        Reset: =
         Width: =205
         X: =1127
         Y: =469
@@ -224,19 +226,30 @@ Exchange As screen:
     Label6_10 As label:
         Align: =Align.Center
         BorderThickness: =5
-        FontWeight: =FontWeight.Bold
         Height: =144
         Size: =15
         Text: |-
-            =If(dayob = 7, 
-            If(
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)) <= v2_3*1,
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)),
-             v2_3*1),
-             If(
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)) <= v2_3*1,
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(v2_3/100)*((D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob)),
-             v2_3*1))
+            =If(
+                dayob = 7,
+                If(
+                    If(
+                        (Value(Label6_11.Text)) <= 0, 0, (v2_3 / 100) * ((Value(Label6_11.Text)))
+                        ) <= v2_3 * 1,
+                    If(
+                        (Value(Label6_11.Text)) <= 0, 0, (v2_3 / 100) * ((Value(Label6_11.Text)))
+                    ),
+                    v2_3 * 1
+                ),
+                If(
+                    If(
+                        (Value(Label6_11.Text)) <= 0, 0, (v2_3 / 100) * ((Value(Label6_11.Text)))
+                    ) <= v2_3 * 1,
+                    If(
+                        (Value(Label6_11.Text)) <= 0, 0, (v2_3 / 100) * ((Value(Label6_11.Text)))
+                    ),
+                    v2_3 * 1
+                )
+            )
         Width: =191
         X: =1145
         Y: =599
@@ -250,8 +263,8 @@ Exchange As screen:
         Size: =15
         Text: |-
             =If(dayob = 7,
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob),
-            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= dayob,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-dayob))
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= 7,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-7),
+            If((D2_2.SelectedDate - D1_2.SelectedDate+1) <= 30,0,(D2_2.SelectedDate - D1_2.SelectedDate+1)-30))
         Width: =209
         X: =934
         Y: =599
