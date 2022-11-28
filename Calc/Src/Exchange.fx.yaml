@@ -158,7 +158,7 @@ Exchange As screen:
             DisabledFill: =AliceBlue
             DisplayMode: =If(mir="on5",Disabled,Edit)
             Height: =55
-            OnSelect: =Set(mir,"on5") And Navigate(Exchange)
+            OnSelect: =Set(mir,"on5") And Navigate(Exchange) And Set(dayob, 7)
             Text: ="Обмен"
             Width: =136
             X: =617
@@ -279,4 +279,10 @@ Exchange As screen:
         X: =1107
         Y: =412
         ZIndex: =48
+
+    Label23 As label:
+        Text: =dayob
+        X: =1108
+        Y: =294
+        ZIndex: =50
 
