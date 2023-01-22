@@ -107,12 +107,13 @@ General As screen:
         ZIndex: =26
 
     Image7 As image:
-        Height: =540
+        Height: =374
         Image: ='image (2)'
+        ImagePosition: =ImagePosition.Fill
         Visible: =If(feedback <> 1, true, false)
-        Width: =1141
-        X: =105
-        Y: =190
+        Width: =837
+        X: =295
+        Y: =260
         ZIndex: =27
 
     Button4 As button:
@@ -127,11 +128,11 @@ General As screen:
     Form1 As form:
         AcceptsFocus: =false
         DataSource: =Table
-        Height: =451
+        Height: =431
         Visible: =false
-        Width: =927
-        X: =228
-        Y: =271
+        Width: =925
+        X: =236
+        Y: =286
         ZIndex: =31
 
         Name_DataCard1 As typedDataCard.textualEditCard:
@@ -145,7 +146,7 @@ General As screen:
             MaxLength: =DataSourceInfo([@Table], DataSourceInfo.MaxLength, "Name")
             Required: =false
             Update: =DataCardValue1.Text
-            Width: =309
+            Width: =308
             X: =0
             Y: =0
             ZIndex: =1
@@ -213,7 +214,7 @@ General As screen:
             MaxLength: =DataSourceInfo([@Table], DataSourceInfo.MaxLength, "datetimevalue")
             Required: =false
             Update: =DataCardValue2.Text
-            Width: =309
+            Width: =308
             X: =1
             Y: =0
             ZIndex: =1
@@ -397,4 +398,19 @@ General As screen:
             X: =1150
             Y: =26
             ZIndex: =41
+
+    Label24 As label:
+        Align: =Align.Center
+        Text: =
+        X: =623
+        Y: =132
+        ZIndex: =44
+
+    Image1 As image:
+        Height: =138
+        Image: =nocomp
+        Width: =541
+        X: =428
+        Y: =150
+        ZIndex: =45
 
