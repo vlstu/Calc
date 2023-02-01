@@ -1,6 +1,6 @@
 General As screen:
     BackgroundImage: =
-    Fill: =WhiteSmoke
+    Fill: =RGBA(255, 255, 255, 1)
     ImagePosition: =ImagePosition.Fill
 
     Icon2 As icon.Support:
