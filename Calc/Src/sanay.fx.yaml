@@ -23,7 +23,7 @@ sanay As screen:
         ZIndex: =5
 
         Button1_2 As button:
-            DisplayMode: =If(x = 1.2, Disabled,Edit)
+            DisplayMode: =If(x = 1.2, DisplayMode.Disabled,DisplayMode.Edit)
             Height: =38
             OnSelect: =Set(x,1.2)
             Text: ="Только доставка"
@@ -34,7 +34,7 @@ sanay As screen:
             ZIndex: =1
 
         Button2_2 As button:
-            DisplayMode: =If(x = 1.5, Disabled,Edit)
+            DisplayMode: =If(x = 1.5, DisplayMode.Disabled,DisplayMode.Edit)
             OnSelect: =Set(x,1.5)
             Text: ="Доставка и сборка"
             Visible: =If(cc=1,true,false)
@@ -44,7 +44,7 @@ sanay As screen:
             ZIndex: =2
 
         Button3_2 As button:
-            DisplayMode: =If(x = 1, Disabled,Edit)
+            DisplayMode: =If(x = 1, DisplayMode.Disabled,DisplayMode.Edit)
             OnSelect: =Set(x,1)
             Text: ="Доставка сборка не нужны"
             Visible: =If(cc=1,true,false)
@@ -67,7 +67,7 @@ sanay As screen:
         ZIndex: =9
 
         Button1_3 As button:
-            DisplayMode: =If(x = 1.2, Disabled,Edit)
+            DisplayMode: =If(x = 1.2, DisplayMode.Disabled,DisplayMode.Edit)
             Height: =38
             OnSelect: =Set(x,1.2)
             Text: ="Только доставка"
@@ -78,7 +78,7 @@ sanay As screen:
             ZIndex: =6
 
         Button2_3 As button:
-            DisplayMode: =If(x = 1.5, Disabled,Edit)
+            DisplayMode: =If(x = 1.5, DisplayMode.Disabled,DisplayMode.Edit)
             OnSelect: =Set(x,1.5)
             Text: ="Доставка и сборка"
             Visible: =If(cc=2,true,false)
@@ -88,7 +88,7 @@ sanay As screen:
             ZIndex: =7
 
         Button3_3 As button:
-            DisplayMode: =If(x = 1, Disabled,Edit)
+            DisplayMode: =If(x = 1, DisplayMode.Disabled,DisplayMode.Edit)
             OnSelect: =Set(x,1)
             Text: ="Доставка сборка не нужны"
             Visible: =If(cc=2,true,false)

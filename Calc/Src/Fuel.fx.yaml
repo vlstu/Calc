@@ -103,10 +103,10 @@ Fuel As screen:
         ZIndex: =33
 
         Button5_24 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on1",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on1",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on1") And Navigate(General)
             Text: ="Главная"
@@ -116,10 +116,10 @@ Fuel As screen:
             ZIndex: =23
 
         Button6_24 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on2",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on2",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on2") And Navigate(Recovery)
             Text: ="Уценка"
@@ -129,10 +129,10 @@ Fuel As screen:
             ZIndex: =24
 
         Button7_24 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on3",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on3",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on3") And Navigate(accambly)
             Text: ="Сборка/ CMW"
@@ -142,10 +142,10 @@ Fuel As screen:
             ZIndex: =25
 
         Button8_24 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on4",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on4",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on4") And Navigate(Delivery)
             Text: ="Доставка"
@@ -155,10 +155,10 @@ Fuel As screen:
             ZIndex: =26
 
         Button9_24 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on5",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on5",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on5") And Navigate(Exchange)
             Text: ="Обмен"
@@ -168,10 +168,10 @@ Fuel As screen:
             ZIndex: =27
 
         Button10_54 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on6",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on6",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on6") And Navigate(Fuel)
             Text: ="Комп.Бензина"
@@ -181,10 +181,10 @@ Fuel As screen:
             ZIndex: =28
 
         Button10_53 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on7",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on7",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on7") And Navigate(Date)
             Text: ="Пропущенный день"
@@ -194,10 +194,10 @@ Fuel As screen:
             ZIndex: =31
 
         Button10_52 As button:
-            DisabledBorderColor: =BlueViolet
-            DisabledColor: =Black
-            DisabledFill: =AliceBlue
-            DisplayMode: =If(mir="on8",Disabled,Edit)
+            DisabledBorderColor: =Color.BlueViolet
+            DisabledColor: =Color.Black
+            DisabledFill: =Color.AliceBlue
+            DisplayMode: =If(mir="on8",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =55
             OnSelect: =Set(mir,"on8") And Navigate(compensation395) 
             Text: ="Неустойка по выплатам"
