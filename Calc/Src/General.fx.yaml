@@ -407,7 +407,7 @@ General As screen:
 
     Image1 As image:
         Height: =138
-        Image: =nocomp1
+        Image: =nocomp
         Width: =541
         X: =428
         Y: =150

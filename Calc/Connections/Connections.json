@@ -1,8 +1,5 @@
 {
   "e9dcd9ef-5872-45fc-9a87-2611c4236276": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Office\u00A0365 Outlook",
@@ -20,9 +17,6 @@
     "id": "e9dcd9ef-5872-45fc-9a87-2611c4236276"
   },
   "fd668975-e529-43ce-960b-11d4764d9cdb": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Excel Online (для бизнеса)",
@@ -48,9 +42,6 @@
     "id": "fd668975-e529-43ce-960b-11d4764d9cdb"
   },
   "fe433d9b-f999-47c1-9e5f-6ea610f339c3": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Пользователи Office\u00A0365",
