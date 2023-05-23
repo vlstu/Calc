@@ -3,3 +3,10 @@ App As appinfo:
     OnStart: |-
         =Navigate(General) & Collect(fish,{Name: ПользователиOffice365.MyProfile().DisplayName, time: Now()}) 
 
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -406,8 +406,8 @@ General As screen:
         ZIndex: =44
 
     Image1 As image:
-        Height: =138
-        Image: =nocomp
+        Height: =189
+        Image: =nocomp_1
         Width: =541
         X: =428
         Y: =150
